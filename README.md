@@ -21,5 +21,6 @@
 6.  pop Up Hapus Structure
 ![Folder Structure](https://drive.google.com/uc?export=view&id=10Txf1YjazclxduOtOYgVvkLExiW1bshw)
 
-7.  Searching
+7.  Searching Fitur
+
 ![UI Detail](https://drive.google.com/uc?export=view&id=14ewjRcrjd1LdtwnhuEiJcBJ02LZzjPmy)
