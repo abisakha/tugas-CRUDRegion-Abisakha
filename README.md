@@ -9,17 +9,17 @@
 2.  Add Form
 ![Add Form](https://drive.google.com/uc?export=view&id=1SNcntsDCmNz_6zN2ylEd999_jSUqfhtD)
 
-3.  Update Region
+3.  Detail Region
 ![Update](https://drive.google.com/uc?export=view&id=1U5vAJlon5F3PitZ9JnSNNzrB2iki3y2T)
 
-4.  Delete Confirmation
+4.  Update Confirmation
 ![Delete](https://drive.google.com/uc?export=view&id=1ZhZHGWCeLDN6OG5QZ_yoSg6k5VVXKt1O)
 
-5. Region Table
+5. Delete Table
 ![List](https://drive.google.com/uc?export=view&id=1xAXIWToysKFZuIIoujfHDtUwiJaXOBxy)
 
-6.  Code Structure
+6.  pop Up Hapus Structure
 ![Folder Structure](https://drive.google.com/uc?export=view&id=10Txf1YjazclxduOtOYgVvkLExiW1bshw)
 
-7.  UI Details
+7.  Searching
 ![UI Detail](https://drive.google.com/uc?export=view&id=14ewjRcrjd1LdtwnhuEiJcBJ02LZzjPmy)
