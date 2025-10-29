@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{index :: page(~{::section})}">
+<body>
+<section>
+
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+        <li class="breadcrumb-item"><a th:href="@{/regions}">Region</a></li>
+        <li class="breadcrumb-item active" aria-current="page" th:text="${title}">Add Region</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h3 class="fw-bold mb-3" th:text="${title}">Add Region</h3>
+
+      <form th:action="${region.id} != null
+                          ? @{/regions/{id}(id=${region.id})}
+                          : @{/regions}"
+            method="post" th:object="${region}" id="regionForm">
+
+        <div class="mb-3">
+          <label class="form-label">Nama <span class="text-danger">*</span></label>
+          <input type="text" th:field="*{name}" class="form-control" th:readonly="${readonly == true}"
+                 placeholder="cth: Asia">
+          <div class="form-text" th:if="${readonly != true}">
+            Gunakan huruf kapital pada awal kata (opsional).
+          </div>
+          <div class="text-danger small" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error</div>
+        </div>
+
+        <div class="d-flex gap-2">
+          <a th:href="@{/regions}" class="btn btn-outline-secondary">Kembali</a>
+          <button th:if="${readonly == null or !readonly}" type="submit" class="btn btn-primary" id="btnSave">
+            <span class="spinner-border spinner-border-sm me-1 d-none" id="btnSpinner" role="status" aria-hidden="true"></span>
+            Simpan
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // tombol Save -> tampilkan spinner singkat agar terasa responsif
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('regionForm');
+      const btn = document.getElementById('btnSave');
+      const spin = document.getElementById('btnSpinner');
+      form?.addEventListener('submit', function () {
+        if (!btn || !spin) return;
+        btn.disabled = true;
+        spin.classList.remove('d-none');
+      });
+    });
+  </script>
+
+</section>
+</body>
+</html>
